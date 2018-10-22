@@ -17,6 +17,10 @@ This is a list of awesome articles about object detection from video.
 
 ## 2016
 
+### Seq-NMS for Video Object Detection
+- **Date**: 26 Feb 2016
+- **Arxiv**: https://arxiv.org/abs/1602.08465
+
 ### T-CNN: Tubelets with Convolutional Neural Networks for Object Detection from Videos
 - **Date**: 9 Apr 2016
 - **Arxiv**: https://arxiv.org/abs/1604.02532
