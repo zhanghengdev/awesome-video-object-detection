@@ -1,6 +1,6 @@
 # Awesome Video-Object-Detection
 
-![Intro](https://github.com/ZHANGHeng19931123/seq_nms_yolo/raw/master/doc/intro1.gif  "Intro")
+![Intro](https://github.com/ZHANGHeng19931123/seq_nms_yolo/raw/master/doc/intro1.gif "Intro")
 
 This is a list of awesome articles about object detection from video.
 
@@ -30,7 +30,7 @@ This is a list of awesome articles about object detection from video.
 - **Code**: https://github.com/myfavouritekk/T-CNN
 
 #### Object Detection from Video Tubelets with Convolutional Neural Networks
-- **Date**:  14 Apr 2016
+- **Date**: 14 Apr 2016
 - **Arxiv**: https://arxiv.org/abs/1604.04053
 - **Code**: https://github.com/myfavouritekk/vdetlib
 
@@ -85,3 +85,15 @@ This is a list of awesome articles about object detection from video.
 - **Arxiv**: https://arxiv.org/abs/1803.05549
 - **Performance**: 80.4% mAP on ImageNet VID validation.
 
+### comparison table
+
+| Paper | Date | Base detector | Backbone | Optical flow? | Online? | mAP(%) | FPS (Titan X) | FPS (on mobiles) |
+| ---|---| ---|---|---|---|---|---|---|
+| Seq-NMS | 26 Feb 2016 | R-FCN | ResNet101 | no | no | 76.8 | 2.3 | - |
+| T-CNN | 9 Apr 2016 | DeepIDNet+CRAFT | - | no | no | 73.8 | - | - |
+| DFF | 23 Nov 2016 | R-FCN | ResNet101 | yes | yes | 73.0 | 29 | - |
+| FGFA | 29 Mar 2017 | R-FCN | ResNet101 | yes | yes | 76.3 | 1.4 | - |
+| FGFA + Seq-NMS | 29 Mar 2017 | R-FCN | ResNet101 | yes | no | 78.4 | 1.14 | - |
+| D&T | 11 Oct 2017 | R-FCN (15 anchors) | ResNet101 | no | no | 79.8 | 7.09 | - |
+| Scale-time-lattice | 16 Apr 2018 | Faster RCNN (15 anchors)| ResNet101 | no | no | 79.6 | 20 | - |
+| Scale-time-lattice | 16 Apr 2018 | Faster RCNN (15 anchors)| ResNet101 | no | no | 79.0 | 62 | - |
