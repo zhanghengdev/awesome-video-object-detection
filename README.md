@@ -53,7 +53,7 @@ This is a list of awesome articles about object detection from video.
 - **Date**: 29 Mar 2017
 - **Arxiv**: https://arxiv.org/abs/1703.10025
 - **Motivation**: Producing powerful spatiotemporal features.
-- **Performance**: 76.3% mAP at 1.4 fps or 78.4% (combined with Seq-NMS) at 1.1 fps on ImageNet VID validation on a Titan X GPU.
+- **Performance**: 76.3% mAP at 1.4 fps or 78.4% (combined with [Seq-NMS](https://arxiv.org/abs/1602.08465)) at 1.1 fps on ImageNet VID validation on a Titan X GPU.
 - **Code**: https://github.com/msracver/Flow-Guided-Feature-Aggregation
 
 #### Detect to Track and Track to Detect
@@ -93,20 +93,20 @@ This is a list of awesome articles about object detection from video.
 - **Arxiv**: https://arxiv.org/abs/1803.05549
 - **Motivation**: Producing powerful spatiotemporal features.
 - **Summary**: Using [deformable convolutions](https://arxiv.org/abs/1703.06211)  across space and time (instead of optical flow) to leverage temporal information for object detection in video, i.e., using deformable convolutions to sample relevant features from nearby frames (27 frames in total) and using temporally aggregagtion (per-pixel weighted summation) to generate final feature maps for detection network ([R-FCN](https://arxiv.org/abs/1605.06409)).
-- **Performance**: 78.9% mAP or 80.4% (combined with Seq-NMS) on ImageNet VID validation.
+- **Performance**: 78.9% mAP or 80.4% (combined with [Seq-NMS](https://arxiv.org/abs/1602.08465)) on ImageNet VID validation.
 
-### comparison table
+## comparison table
 
-| Paper | Date | Base detector | Backbone | Optical flow? | Online? | mAP(%) | FPS (Titan X) | FPS (on mobiles) |
+| Paper | Date | Base detector | Backbone | Tracking? | Optical flow? | Online? | mAP(%) | FPS (Titan X) |
 | ---|---| ---|---|---|---|---|---|---|
-| Seq-NMS | 26 Feb 2016 | R-FCN | ResNet101 | no | no | 76.8 | 2.3 | - |
-| T-CNN | 9 Apr 2016 | DeepIDNet+CRAFT | - | no | no | 73.8 | - | - |
-| DFF | 23 Nov 2016 | R-FCN | ResNet101 | yes | yes | 73.0 | 29 | - |
-| FGFA | 29 Mar 2017 | R-FCN | ResNet101 | yes | yes | 76.3 | 1.4 | - |
-| FGFA + Seq-NMS | 29 Mar 2017 | R-FCN | ResNet101 | yes | no | 78.4 | 1.14 | - |
-| D&T | 11 Oct 2017 | R-FCN (15 anchors) | ResNet101 | no | no | 79.8 | 7.09 | - |
-| Scale-time-lattice | 16 Apr 2018 | Faster RCNN (15 anchors)| ResNet101 | no | no | 79.6 | 20 | - |
-| Scale-time-lattice | 16 Apr 2018 | Faster RCNN (15 anchors)| ResNet101 | no | no | 79.0 | 62 | - |
-| SSN (per-frame baseline for STSN) | 15 Mar 2018 | R-FCN (9 anchors)| Deformable ResNet101 | no | yes | 76.0 | - | - |
-| STSN | 15 Mar 2018 | R-FCN (9 anchors)| Deformable ResNet101 | no | yes | 78.9 | - | - |
-| STSN+Seq-NMS | 15 Mar 2018 | R-FCN (9 anchors)| Deformable ResNet101 | no | no | 80.4 | - | - |
+| [Seq-NMS](https://arxiv.org/abs/1602.08465) | 26 Feb 2016 | [R-FCN](https://arxiv.org/abs/1605.06409) | ResNet101 | no | no | no | 76.8 | 2.3 |
+| [T-CNN](https://arxiv.org/abs/1604.02532) | 9 Apr 2016 | DeepIDNet+CRAFT | - | yes | no | no | 73.8 | - |
+| [DFF](https://arxiv.org/abs/1611.07715) | 23 Nov 2016 | [R-FCN](https://arxiv.org/abs/1605.06409) | ResNet101 | no | yes | yes | 73.0 | 29 |
+| [FGFA](https://arxiv.org/abs/1703.10025) | 29 Mar 2017 | [R-FCN](https://arxiv.org/abs/1605.06409) | ResNet101 | no | yes | yes | 76.3 | 1.4 |
+| [FGFA](https://arxiv.org/abs/1703.10025) + [Seq-NMS](https://arxiv.org/abs/1602.08465) | 29 Mar 2017 | [R-FCN](https://arxiv.org/abs/1605.06409) | ResNet101 | no | yes | no | 78.4 | 1.14 |
+| [D&T](https://arxiv.org/abs/1710.03958) | 11 Oct 2017 | [R-FCN](https://arxiv.org/abs/1605.06409) (15 anchors) | ResNet101 | yes | no | no | 79.8 | 7.09 |
+| [Scale-time-lattice](https://arxiv.org/abs/1804.05472) | 16 Apr 2018 | [Faster RCNN](https://arxiv.org/abs/1506.01497) (15 anchors)| ResNet101 | no | no | no | 79.6 | 20 |
+| [Scale-time-lattice](https://arxiv.org/abs/1804.05472) | 16 Apr 2018 | [Faster RCNN](https://arxiv.org/abs/1506.01497) (15 anchors)| ResNet101 | no | no | no | 79.0 | 62 |
+| [SSN](https://arxiv.org/abs/1803.05549) (per-frame baseline for STSN) | 15 Mar 2018 | [R-FCN](https://arxiv.org/abs/1605.06409) | Deformable ResNet101 | no | no | yes | 76.0 | - |
+| [STSN](https://arxiv.org/abs/1803.05549) | 15 Mar 2018 | [R-FCN](https://arxiv.org/abs/1605.06409)| Deformable ResNet101 | no | no | yes | 78.9 | - |
+| [STSN](https://arxiv.org/abs/1803.05549)+[Seq-NMS](https://arxiv.org/abs/1602.08465) | 15 Mar 2018 | [R-FCN](https://arxiv.org/abs/1605.06409)| Deformable ResNet101 | no | no | no | 80.4 | - |
