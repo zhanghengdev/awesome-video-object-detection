@@ -22,6 +22,7 @@ This is a list of awesome articles about object detection from video.
 #### Seq-NMS for Video Object Detection
 - **Date**: 26 Feb 2016
 - **Arxiv**: https://arxiv.org/abs/1602.08465
+- **Motivation**: Smoothing the final bounding box predictions across time.
 - **Summary**:  Constructing a temporal graph from overlapping bounding box detections across the adjacent frames, and using dynamic programming to select bounding box sequences with the highest overall detection score.
 
 #### T-CNN: Tubelets with Convolutional Neural Networks for Object Detection from Videos
@@ -51,6 +52,7 @@ This is a list of awesome articles about object detection from video.
 #### Flow-Guided Feature Aggregation for Video Object Detection
 - **Date**: 29 Mar 2017
 - **Arxiv**: https://arxiv.org/abs/1703.10025
+- **Motivation**: Producing powerful spatiotemporal features.
 - **Performance**: 76.3% mAP at 1.4 fps or 78.4% (combined with Seq-NMS) at 1.1 fps on ImageNet VID validation on a Titan X GPU.
 - **Code**: https://github.com/msracver/Flow-Guided-Feature-Aggregation
 
@@ -65,6 +67,7 @@ This is a list of awesome articles about object detection from video.
 #### Towards High Performance Video Object Detection
 - **Date**: 30 Nov 2017
 - **Arxiv**: https://arxiv.org/abs/1711.11577
+- **Motivation**: Producing powerful spatiotemporal features.
 - **Performance**: 78.6% mAP on ImageNet VID validation at 13 fps on a Titan X GPU.
 
 ### 2018
@@ -76,6 +79,7 @@ This is a list of awesome articles about object detection from video.
 #### Towards High Performance Video Object Detection for Mobiles 
 - **Date**: 16 Apr 2018
 - **Arxiv**: https://arxiv.org/abs/1804.05830
+- **Motivation**: Producing powerful spatiotemporal features.
 - **Performance**: 60.2% mAP on ImageNet VID validation at 25.6 fps on mobiles.
 
 #### Optimizing Video Object Detection via a Scale-Time Lattice
