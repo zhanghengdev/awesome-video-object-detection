@@ -22,10 +22,12 @@ This is a list of awesome articles about object detection from video.
 #### Seq-NMS for Video Object Detection
 - **Date**: 26 Feb 2016
 - **Arxiv**: https://arxiv.org/abs/1602.08465
+- **Summary**:  Constructing a temporal graph from overlapping bounding box detections across the adjacent frames, and using dynamic programming to select bounding box sequences with the highest overall detection score.
 
 #### T-CNN: Tubelets with Convolutional Neural Networks for Object Detection from Videos
 - **Date**: 9 Apr 2016
 - **Arxiv**: https://arxiv.org/abs/1604.02532
+- **Summary**:  Using a video object detection pipeline that involves predicting optical flow first, then propagating image level predictions according to the flow, and finally using a tracking algorithm to select temporally consistent high confidence detections.
 - **Performance**: 73.8% mAP on ImageNet VID validation.
 - **Code**: https://github.com/myfavouritekk/T-CNN
 
@@ -55,6 +57,8 @@ This is a list of awesome articles about object detection from video.
 #### Detect to Track and Track to Detect
 - **Date**: 11 Oct 2017
 - **Arxiv**: https://arxiv.org/abs/1710.03958
+- **Motivation**: Smoothing the final bounding box predictions across time.
+- **Summary**: Proposing a ConvNet architecture that solves detection and tracking problems jointly and applying a Viterbi algorithm to link the detections across time.
 - **Performance**: 79.8% mAP on ImageNet VID validation.
 - **Code**: https://github.com/feichtenhofer/Detect-Track
 
@@ -83,7 +87,9 @@ This is a list of awesome articles about object detection from video.
 #### Object Detection in Video with Spatiotemporal Sampling Networks
 - **Date**: 15 Mar 2018
 - **Arxiv**: https://arxiv.org/abs/1803.05549
-- **Performance**: 80.4% mAP on ImageNet VID validation.
+- **Motivation**: Producing powerful spatiotemporal features.
+- **Summary**: Using [deformable convolutions](https://arxiv.org/abs/1703.06211)  across space and time (instead of optical flow) to leverage temporal information for object detection in video, i.e., using deformable convolutions to sample relevant features from nearby frames (27 frames in total) and using temporally aggregagtion (per-pixel weighted summation) to generate final feature maps for detection network ([R-FCN](https://arxiv.org/abs/1605.06409)).
+- **Performance**: 78.9% mAP or 80.4% (combined with Seq-NMS) on ImageNet VID validation.
 
 ### comparison table
 
@@ -97,3 +103,6 @@ This is a list of awesome articles about object detection from video.
 | D&T | 11 Oct 2017 | R-FCN (15 anchors) | ResNet101 | no | no | 79.8 | 7.09 | - |
 | Scale-time-lattice | 16 Apr 2018 | Faster RCNN (15 anchors)| ResNet101 | no | no | 79.6 | 20 | - |
 | Scale-time-lattice | 16 Apr 2018 | Faster RCNN (15 anchors)| ResNet101 | no | no | 79.0 | 62 | - |
+| SSN (per-frame baseline for STSN) | 15 Mar 2018 | R-FCN (9 anchors)| Deformable ResNet101 | no | yes | 76.0 | - | - |
+| STSN | 15 Mar 2018 | R-FCN (9 anchors)| Deformable ResNet101 | no | yes | 78.9 | - | - |
+| STSN+Seq-NMS | 15 Mar 2018 | R-FCN (9 anchors)| Deformable ResNet101 | no | no | 80.4 | - | - |
