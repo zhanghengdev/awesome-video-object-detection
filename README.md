@@ -10,7 +10,8 @@ This is a list of awesome articles about object detection from video.
 
 - [ ] Add summary for D&T
 - [ ] Add summary for Scale-Time-Lattice
-- [ ] Add summary for STMM
+- [ ] Add summary for STMN
+- [x] Add summary for STSN
 - [x] Add summary for MANet
 
 ## Datasets
@@ -106,6 +107,8 @@ This is a list of awesome articles about object detection from video.
 - **Date**: 15 Mar 2018
 - **Arxiv**: https://arxiv.org/abs/1803.05549
 - **Motivation**: Producing powerful spatiotemporal features.
+- **Architecture**:
+![](imgs/20181028-211036.png)
 - **Summary**: Using [deformable convolutions](https://arxiv.org/abs/1703.06211)  across space and time (instead of optical flow) to leverage temporal information for object detection in video, i.e., using **deformable convolutions** to sample relevant features from nearby frames (27 frames in total) and using **temporally aggregagtion** (per-pixel weighted summation) to generate final feature maps for detection network ([R-FCN](https://arxiv.org/abs/1605.06409)).
 - **Performance**: 78.9% mAP or 80.4% (combined with [Seq-NMS](https://arxiv.org/abs/1602.08465)) on ImageNet VID validation.
 
@@ -113,9 +116,9 @@ This is a list of awesome articles about object detection from video.
 - **Date**: Stp. 2018
 - **Paper**: http://openaccess.thecvf.com/content_ECCV_2018/html/Shiyao_Wang_Fully_Motion-Aware_Network_ECCV_2018_paper.html
 - **Motivation**: Producing powerful spatiotemporal features.
+- **Architecture**:
+![](imgs/20181028-210817.png)
 - **Summary**: Similar with [FGFA](https://arxiv.org/abs/1703.10025), but in addtion to pixel-level feature calibration and aggregagtion, [MANet](http://openaccess.thecvf.com/content_ECCV_2018/html/Shiyao_Wang_Fully_Motion-Aware_Network_ECCV_2018_paper.html) proposes the **motion pattern reasoning module** to dynamically combine (learnable soft weights) **pixel-level** and **instance-level** calibration according to the motion (optical flow by [FlowNet](https://arxiv.org/abs/1504.06852)). **Instance-level calibration** is achieved by regressing relative movements (△ x , △ y , △ w , △ h) on the optical flow estimation according to proposal positions of reference frame. Final feaure maps for detection network ([R-FCN](https://arxiv.org/abs/1605.06409)) are the aggregation of nearby (13 frames in total) calibrated feature maps. Pixel-level calibration achieves better improvements for non-rigid movements while instance-level calibration is better for rigid movements and occlusion cases.
-
-
 - **Performance**: 78.1% mAP or 80.3% (combined with [Seq-NMS](https://arxiv.org/abs/1602.08465)) on ImageNet VID validation.
 
 ## Comparison table
