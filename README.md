@@ -108,7 +108,7 @@ This is a list of awesome articles about object detection from video.
 - **Arxiv**: https://arxiv.org/abs/1803.05549
 - **Motivation**: Producing powerful spatiotemporal features.
 - **Architecture**:
-![](imgs/20181028-211036.png)
+![](imgs/20181028-211525.png)
 - **Summary**: Using [deformable convolutions](https://arxiv.org/abs/1703.06211)  across space and time (instead of optical flow) to leverage temporal information for object detection in video, i.e., using **deformable convolutions** to sample relevant features from nearby frames (27 frames in total) and using **temporally aggregagtion** (per-pixel weighted summation) to generate final feature maps for detection network ([R-FCN](https://arxiv.org/abs/1605.06409)).
 - **Performance**: 78.9% mAP or 80.4% (combined with [Seq-NMS](https://arxiv.org/abs/1602.08465)) on ImageNet VID validation.
 
