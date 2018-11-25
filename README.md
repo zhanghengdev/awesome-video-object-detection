@@ -135,9 +135,9 @@ Assuming $F_t$ as the appearane feature for the current frame and $M^{\rightarro
 | [FGFA](https://arxiv.org/abs/1703.10025) | 29 Mar 2017 | [R-FCN](https://arxiv.org/abs/1605.06409) | ResNet101 | no | yes | yes | 76.3 | 1.4 |
 | [FGFA](https://arxiv.org/abs/1703.10025) + [Seq-NMS](https://arxiv.org/abs/1602.08465) | 29 Mar 2017 | [R-FCN](https://arxiv.org/abs/1605.06409) | ResNet101 | no | yes | no | 78.4 | 1.14 |
 | [D&T](https://arxiv.org/abs/1710.03958) | 11 Oct 2017 | [R-FCN](https://arxiv.org/abs/1605.06409) (15 anchors) | ResNet101 | yes | no | no | 79.8 | 7.09 |
-| [STMN](https://arxiv.org/abs/1712.06317) | 18 Dec 2017 | [R-FCN](https://arxiv.org/abs/1605.06409) | ResNet101 | no | no | no | 80.5 | - |
+| [STMN](https://arxiv.org/abs/1712.06317) | 18 Dec 2017 | [R-FCN](https://arxiv.org/abs/1605.06409) | ResNet101 | no | no | no | **80.5** | - |
 | [Scale-time-lattice](https://arxiv.org/abs/1804.05472) | 16 Apr 2018 | [Faster RCNN](https://arxiv.org/abs/1506.01497) (15 anchors)| ResNet101 | no | no | no | 79.6 | 20 |
-| [Scale-time-lattice](https://arxiv.org/abs/1804.05472) | 16 Apr 2018 | [Faster RCNN](https://arxiv.org/abs/1506.01497) (15 anchors)| ResNet101 | no | no | no | 79.0 | 62 |
+| [Scale-time-lattice](https://arxiv.org/abs/1804.05472) | 16 Apr 2018 | [Faster RCNN](https://arxiv.org/abs/1506.01497) (15 anchors)| ResNet101 | no | no | no | 79.0 | **62** |
 | [SSN](https://arxiv.org/abs/1803.05549) (per-frame baseline for STSN) | 15 Mar 2018 | [R-FCN](https://arxiv.org/abs/1605.06409) | Deformable ResNet101 | no | no | yes | 76.0 | - |
 | [STSN](https://arxiv.org/abs/1803.05549) | 15 Mar 2018 | [R-FCN](https://arxiv.org/abs/1605.06409)| Deformable ResNet101 | no | no | yes | 78.9 | - |
 | [STSN](https://arxiv.org/abs/1803.05549)+[Seq-NMS](https://arxiv.org/abs/1602.08465) | 15 Mar 2018 | [R-FCN](https://arxiv.org/abs/1605.06409)| Deformable ResNet101 | no | no | no | 80.4 | - |
