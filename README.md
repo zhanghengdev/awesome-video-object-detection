@@ -11,6 +11,7 @@ This is a list of awesome articles about object detection from video.
 - [x] Add summary for STMN
 - [x] Add summary for STSN
 - [x] Add summary for MANet
+- [ ] Add summary for Tracklet-Conditioned Detection
 
 ## Datasets
 
@@ -124,6 +125,13 @@ Assuming $F_t$ as the appearane feature for the current frame and $M^{\rightarro
 - **Summary**: Similar with [FGFA](https://arxiv.org/abs/1703.10025), but in addtion to pixel-level feature calibration and aggregagtion, [MANet](http://openaccess.thecvf.com/content_ECCV_2018/html/Shiyao_Wang_Fully_Motion-Aware_Network_ECCV_2018_paper.html) proposes the **motion pattern reasoning module** to dynamically combine (learnable soft weights) **pixel-level** and **instance-level** calibration according to the motion (optical flow by [FlowNet](https://arxiv.org/abs/1504.06852)). **Instance-level calibration** is achieved by regressing relative movements $(\Delta x , \Delta y , \Delta w , \Delta h)$ on the optical flow estimation according to proposal positions of reference frame. Final feaure maps for detection network ([R-FCN](https://arxiv.org/abs/1605.06409)) are the aggregation of nearby (13 frames in total) calibrated feature maps. Pixel-level calibration achieves better improvements for non-rigid movements while instance-level calibration is better for rigid movements and occlusion cases.
 - **Performance**: 78.1% mAP or 80.3% (combined with [Seq-NMS](https://arxiv.org/abs/1602.08465)) on ImageNet VID validation.
 
+
+#### Integrated Object Detection and Tracking with Tracklet-Conditioned Detection
+- **Date**: Nov 2018
+- **Arxiv**: https://arxiv.org/abs/1811.11167
+- **Motivation**: Smoothing the final bounding box predictions across time.
+- **Performance**: 83.5% of mAP with [FGFA](https://arxiv.org/abs/1703.10025) and [Deformable ConvNets v2](https://arxiv.org/abs/1811.11168) on ImageNet VID validation.
+
 ## Comparison table
 
 | Paper | Date | Base detector | Backbone | Tracking? | Optical flow? | Online? | mAP(%) | FPS (Titan X) |
@@ -143,3 +151,6 @@ Assuming $F_t$ as the appearane feature for the current frame and $M^{\rightarro
 | [STSN](https://arxiv.org/abs/1803.05549)+[Seq-NMS](https://arxiv.org/abs/1602.08465) | 15 Mar 2018 | [R-FCN](https://arxiv.org/abs/1605.06409)| Deformable ResNet101 | no | no | no | 80.4 | - |
 | [MANet](http://openaccess.thecvf.com/content_ECCV_2018/html/Shiyao_Wang_Fully_Motion-Aware_Network_ECCV_2018_paper.html) | Sep. 2018 | [R-FCN](https://arxiv.org/abs/1605.06409)| ResNet101 | no | yes | yes | 78.1 | 5 |
 | [MANet](http://openaccess.thecvf.com/content_ECCV_2018/html/Shiyao_Wang_Fully_Motion-Aware_Network_ECCV_2018_paper.html)+[Seq-NMS](https://arxiv.org/abs/1602.08465) | Sep. 2018 | [R-FCN](https://arxiv.org/abs/1605.06409)| ResNet101 | no | yes | no | 80.3 | - |
+| [Tracklet-Conditioned Detection](https://arxiv.org/abs/1811.11167) | Nov 2018 | [R-FCN](https://arxiv.org/abs/1605.06409)| ResNet101 | yes | no | yes | 78.1 | - |
+| [Tracklet-Conditioned Detection](https://arxiv.org/abs/1811.11167)+[DCNv2](https://arxiv.org/abs/1811.11168) | Nov 2018 | [R-FCN](https://arxiv.org/abs/1605.06409)| ResNet101 | yes | no | yes | 82.0 | - |
+| [Tracklet-Conditioned Detection](https://arxiv.org/abs/1811.11167)+[DCNv2](https://arxiv.org/abs/1811.11168)+[FGFA](https://arxiv.org/abs/1703.10025) | Nov 2018 | [R-FCN](https://arxiv.org/abs/1605.06409)| ResNet101 | yes | no | yes | 83.5 | - |
