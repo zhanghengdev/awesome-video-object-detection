@@ -144,6 +144,10 @@ This is a list of awesome articles about object detection from video.
 - **Motivation**: Smoothing the final bounding box predictions across time.
 - **Performance**: 83.5% of mAP with [FGFA](https://arxiv.org/abs/1703.10025) and [Deformable ConvNets v2](https://arxiv.org/abs/1811.11168) on ImageNet VID validation.
 
+#### AdaScale: Towards Real-time Video Object Detection Using Adaptive Scaling
+[[arXiv]](https://arxiv.org/pdf/1902.02910.pdf)
+- Ting-Wu Chin et al., SysML 2019.
+
 ## Comparison table
 
 | Paper | Date | Base detector | Backbone | Tracking? | Optical flow? | Online? | mAP(%) | FPS (Titan X) |
