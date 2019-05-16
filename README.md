@@ -2,16 +2,7 @@
 
 ![Intro](https://github.com/ZHANGHeng19931123/seq_nms_yolo/raw/master/doc/intro1.gif "Intro")
 
-This is a list of awesome articles about object detection from video.
-
-## TODO
-
-- [ ] Add summary for D&T
-- [ ] Add summary for Scale-Time-Lattice
-- [x] Add summary for STMN
-- [x] Add summary for STSN
-- [x] Add summary for MANet
-- [ ] Add summary for Tracklet-Conditioned Detection
+This is a list of awesome articles about **object detection from video**.
 
 ## Datasets
 
@@ -144,9 +135,21 @@ This is a list of awesome articles about object detection from video.
 - **Motivation**: Smoothing the final bounding box predictions across time.
 - **Performance**: 83.5% of mAP with [FGFA](https://arxiv.org/abs/1703.10025) and [Deformable ConvNets v2](https://arxiv.org/abs/1811.11168) on ImageNet VID validation.
 
+### 2019
+
 #### AdaScale: Towards Real-time Video Object Detection Using Adaptive Scaling
 [[arXiv]](https://arxiv.org/pdf/1902.02910.pdf)
-- Ting-Wu Chin et al., SysML 2019.
+
+- **Date**: Feb 2019
+- **Motivation**: Adaptively rescale the input image resolution to improve both accuracy and speed for video object detection.
+- **Performance**: 75.5% of mAP on ImageNet VID validation for 4 different multi-scale training (600, 480, 360, 240).
+
+#### Improving Video Object Detection by Seq-Bbox Matching
+[[pdf]](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=2ahUKEwjWwNWa95_iAhUMyoUKHR-GAJwQFjABegQIBBAC&url=http%3A%2F%2Fwww.insticc.org%2FPrimoris%2FResources%2FPaperPdf.ashx%3FidPaper%3D72600&usg=AOvVaw1dTqzUoybpNRVkCdkA1xg0) [[Code (future)]](https://github.com/ZHANGHeng19931123/seq_nms_yolo)
+
+- **Date**: Feb 2019
+- **Motivation**: Smoothing the final bounding box predictions across time (box-level method).
+- **Performance**: 80.9% of mAP (offline detection) and 78.2% of mAP (online detection) both at 38 fps on a Titan X GPU.
 
 ## Comparison table
 
@@ -170,3 +173,5 @@ This is a list of awesome articles about object detection from video.
 | [Tracklet-Conditioned Detection](https://arxiv.org/abs/1811.11167) | Nov 2018 | [R-FCN](https://arxiv.org/abs/1605.06409)| ResNet101 | yes | no | yes | 78.1 | - |
 | [Tracklet-Conditioned Detection](https://arxiv.org/abs/1811.11167)+[DCNv2](https://arxiv.org/abs/1811.11168) | Nov 2018 | [R-FCN](https://arxiv.org/abs/1605.06409)| ResNet101 | yes | no | yes | 82.0 | - |
 | [Tracklet-Conditioned Detection](https://arxiv.org/abs/1811.11167)+[DCNv2](https://arxiv.org/abs/1811.11168)+[FGFA](https://arxiv.org/abs/1703.10025) | Nov 2018 | [R-FCN](https://arxiv.org/abs/1605.06409)| ResNet101 | yes | no | yes | **83.5** | - |
+| [Seq-Bbox Matching](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=2ahUKEwjWwNWa95_iAhUMyoUKHR-GAJwQFjABegQIBBAC&url=http%3A%2F%2Fwww.insticc.org%2FPrimoris%2FResources%2FPaperPdf.ashx%3FidPaper%3D72600&usg=AOvVaw1dTqzUoybpNRVkCdkA1xg0) | Feb 2019 | [YOLOv3](https://pjreddie.com/media/files/papers/YOLOv3.pdf)| darknet53 | no | no | no | **80.9** | 38 |
+| [Seq-Bbox Matching](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=2ahUKEwjWwNWa95_iAhUMyoUKHR-GAJwQFjABegQIBBAC&url=http%3A%2F%2Fwww.insticc.org%2FPrimoris%2FResources%2FPaperPdf.ashx%3FidPaper%3D72600&usg=AOvVaw1dTqzUoybpNRVkCdkA1xg0) | Feb 2019 | [YOLOv3](https://pjreddie.com/media/files/papers/YOLOv3.pdf)| darknet53 | no | no | yes | **78.2** | 38 |
