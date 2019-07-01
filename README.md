@@ -145,7 +145,7 @@ This is a list of awesome articles about **object detection from video**.
 - **Performance**: 75.5% of mAP on ImageNet VID validation for 4 different multi-scale training (600, 480, 360, 240).
 
 #### Improving Video Object Detection by Seq-Bbox Matching
-[[pdf]](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=2ahUKEwjWwNWa95_iAhUMyoUKHR-GAJwQFjABegQIBBAC&url=http%3A%2F%2Fwww.insticc.org%2FPrimoris%2FResources%2FPaperPdf.ashx%3FidPaper%3D72600&usg=AOvVaw1dTqzUoybpNRVkCdkA1xg0) [[Code (future)]](https://github.com/ZHANGHeng19931123/seq_nms_yolo)
+[[pdf]](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=2ahUKEwjWwNWa95_iAhUMyoUKHR-GAJwQFjABegQIBBAC&url=http%3A%2F%2Fwww.insticc.org%2FPrimoris%2FResources%2FPaperPdf.ashx%3FidPaper%3D72600&usg=AOvVaw1dTqzUoybpNRVkCdkA1xg0)
 
 - **Date**: Feb 2019
 - **Motivation**: Smoothing the final bounding box predictions across time (box-level method).
@@ -173,5 +173,5 @@ This is a list of awesome articles about **object detection from video**.
 | [Tracklet-Conditioned Detection](https://arxiv.org/abs/1811.11167) | Nov 2018 | [R-FCN](https://arxiv.org/abs/1605.06409)| ResNet101 | yes | no | yes | 78.1 | - |
 | [Tracklet-Conditioned Detection](https://arxiv.org/abs/1811.11167)+[DCNv2](https://arxiv.org/abs/1811.11168) | Nov 2018 | [R-FCN](https://arxiv.org/abs/1605.06409)| ResNet101 | yes | no | yes | 82.0 | - |
 | [Tracklet-Conditioned Detection](https://arxiv.org/abs/1811.11167)+[DCNv2](https://arxiv.org/abs/1811.11168)+[FGFA](https://arxiv.org/abs/1703.10025) | Nov 2018 | [R-FCN](https://arxiv.org/abs/1605.06409)| ResNet101 | yes | no | yes | **83.5** | - |
-| [Seq-Bbox Matching](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=2ahUKEwjWwNWa95_iAhUMyoUKHR-GAJwQFjABegQIBBAC&url=http%3A%2F%2Fwww.insticc.org%2FPrimoris%2FResources%2FPaperPdf.ashx%3FidPaper%3D72600&usg=AOvVaw1dTqzUoybpNRVkCdkA1xg0) | Feb 2019 | [YOLOv3](https://pjreddie.com/media/files/papers/YOLOv3.pdf)| darknet53 | no | no | no | **80.9** | 38 |
-| [Seq-Bbox Matching](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=2ahUKEwjWwNWa95_iAhUMyoUKHR-GAJwQFjABegQIBBAC&url=http%3A%2F%2Fwww.insticc.org%2FPrimoris%2FResources%2FPaperPdf.ashx%3FidPaper%3D72600&usg=AOvVaw1dTqzUoybpNRVkCdkA1xg0) | Feb 2019 | [YOLOv3](https://pjreddie.com/media/files/papers/YOLOv3.pdf)| darknet53 | no | no | yes | **78.2** | 38 |
+| [Seq-Bbox Matching](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=2ahUKEwjWwNWa95_iAhUMyoUKHR-GAJwQFjABegQIBBAC&url=http%3A%2F%2Fwww.insticc.org%2FPrimoris%2FResources%2FPaperPdf.ashx%3FidPaper%3D72600&usg=AOvVaw1dTqzUoybpNRVkCdkA1xg0) | Feb 2019 | [YOLOv3](https://pjreddie.com/media/files/papers/YOLOv3.pdf)| darknet53 | no | no | no | 80.9 | 38 |
+| [Seq-Bbox Matching](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=2ahUKEwjWwNWa95_iAhUMyoUKHR-GAJwQFjABegQIBBAC&url=http%3A%2F%2Fwww.insticc.org%2FPrimoris%2FResources%2FPaperPdf.ashx%3FidPaper%3D72600&usg=AOvVaw1dTqzUoybpNRVkCdkA1xg0) | Feb 2019 | [YOLOv3](https://pjreddie.com/media/files/papers/YOLOv3.pdf)| darknet53 | no | no | yes | 78.2 | 38 |
